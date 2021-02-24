@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="header">
+            <h1 style="color: rgb(7, 183, 253);">
+                <center>Quotation Entry</center>
+            </h1>
+        </div><br>
+        <div class=" body ">
+            <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                <div class="row ">
+                    <div class="col-sm-12 ">
+                        <div class="card bg-light ">
+                            <div class="card-body ">
+
+                                <div class="form-row ">
+                                    <div class="col-sm-6 ">
+                                        <div class="form-group ">
+                                            <label><b>Client Code</b></label>
+                                            <input type="text " class="form-control " id="Ccode ">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 ">
+                                        <div class="form-group ">
+                                            <label><b>Requested Quantity (By Customer)</b></label>
+                                            <input type="text " class="form-control " id="Cquantity">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row ">
+                                    <div class="col-sm-6 ">
+                                        <div class="form-group ">
+                                            <label><b>Client Name</b></label>
+                                            <input type="text " class="form-control " id="Cname ">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 ">
+                                        <div class="form-group ">
+                                            <label><b>Available Quantity (In your branch)</b></label>
+                                            <input type="text " class="form-control " id="Bquantity">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row ">
+                                    <div class="col-sm-6 ">
+                                        <div class="form-group ">
+                                            <label><b>Name/Description</b></label>
+                                            <input type="text " class="form-control " id="name">
+                                        </div>
+                                    </div>
+                                    <div class=" col-sm-6 ">
+                                        <div class="form-group ">
+                                            <label><b>Requested Quantity (From other branch)</b></label>
+                                            <input type="text " class="form-control " id="Oquantity ">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row ">
+                                    <div class="col-sm-6 ">
+                                        <div class="form-group ">
+                                            <label><b>Bar Code</b></label>
+                                            <input type="text " class="form-control " id="barcode ">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 ">
+                                        <div class="form-group ">
+                                            <label><b>Total Quantity</b></label>
+                                            <input type="text " class="form-control " id="Tquantity">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row ">
+                                    <div class="col-sm-6 ">
+                                        <div class="form-group ">
+                                            <label><b>Brand</b></label>
+                                            <input type="text " class="form-control " id="brand ">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 ">
+                                        <div class="form-group ">
+                                            <label><b>Discount %</b></label>
+                                            <input type="text " class="form-control " id="discount">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row ">
+                                    <div class="col-sm-6 ">
+                                        <div class="form-group ">
+                                            <label><b>Unit</b></label>
+                                            <input type="text " class="form-control " id="unit ">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 ">
+                                        <div class="form-group ">
+                                            <label><b>Discount Amount</b></label>
+                                            <input type="text " class="form-control " id="Damount">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row ">
+                                    <div class="col-sm-6 ">
+                                        <div class="form-group ">
+                                            <label><b>Sale Price</b></label>
+                                            <input type="text " class="form-control " id="price">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 ">
+                                        <div class="form-group ">
+                                            <label><b>Total Amount</b></label>
+                                            <input type="text " class="form-control " id="Tamount">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container mt-4">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class="form-action-buttons">
+                                                <center>
+                                                    <button type="submit " class="btn btn-primary" value="Submit">Add</button>
+                                                    <button type="reset" class="btn btn-danger " value="clear">Reset</button>
+                                                </center>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <br>
+        <div class="table-responsive">
+            <table class="table table-bordered" style="background-color: black; color: white;" id="quotation">
+                <thead>
+                    <tr>
+                        <th scope="col">Client Code</th>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Barcode</th>
+                        <th scope="col">Available Quantity</th>
+                        <th scope="col">Requested Quantity</th>
+                        <th scope="col">Total Quantity</th>
+                        <th scope="col">Sale Price</th>
+                        <th scope="col">Discount %</th>
+                        <th scope="col">Discount Amount</th>
+                        <th scope="col">Total Price</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br><br>
+    <center>
+        <div class="remarks">
+            <label for="remarks"><h3 style="color: blue;"><b>Remarks</b></h3></label><br>
+            <textarea id="remarks" cols="100" rows="5 "></textarea><br>
+            <button type="submit1 " class="btn btn-primary " value="Submit1 ">Submit</button>
+        </div>
+    </center>
+    <script src="script.js "></script>
+</body>
+
+</html>
