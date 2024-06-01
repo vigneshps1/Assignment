@@ -1,3 +1,4 @@
+//Assignment script.js
 var selectedRow = null
 
 function onFormSubmit() {
